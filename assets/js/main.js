@@ -150,7 +150,7 @@ var CertificationSlider = new Swiper(".certification-slider", {
 sr.reveal(".home", { origin: "bottom", distance: "20px", delay: 300 });
 sr.reveal(".about", { origin: "bottom", distance: "50px", delay: 300 });
 sr.reveal(".experience", { origin: "bottom", distance: "50px", delay: 300 });
-sr.reveal(".experience", { origin: "bottom", distance: "50px", delay: 300 });
+sr.reveal(".education", { origin: "bottom", distance: "50px", delay: 300 });
 sr.reveal(".portofolio", { origin: "bottom", distance: "20px", delay: 300 });
 sr.reveal(".certification", { origin: "bottom", distance: "20px", delay: 300 });
 
