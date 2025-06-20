@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="assets/img/icon.png" />
+
+    <!--========== SWIPER ==========-->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+
+    <!--========== CSS ==========-->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <title>Portofolio Akhtar Faizi Putra</title>
+  </head>
+  <body>
+    <!--========== SCROLL TOP ==========-->
+    <a href="#" class="scrolltop" id="scroll-top">
+      <svg
+        class="scrolltop__icon"
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="16"
+        fill="currentColor"
+        class="bi bi-chevron-double-up"
+        viewBox="0 0 16 16"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M7.646 2.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 3.707 2.354 9.354a.5.5 0 1 1-.708-.708l6-6z"
+        />
+        <path
+          fill-rule="evenodd"
+          d="M7.646 6.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 7.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"
+        />
+      </svg>
+    </a>
+
+    <!--========== HEADER ==========-->
+    <header class="l-header" id="header">
+      <nav class="nav bd-container">
+        <a href="#" class="nav__logo">Akhtar Error</a>
+
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#home" class="nav__link active-link">Beranda</a>
+            </li>
+            <li class="nav__item">
+              <a href="#about" class="nav__link">Tentang</a>
+            </li>
+            <li class="nav__item">
+              <a href="#experience" class="nav__link">Pengalaman</a>
+            </li>
+            <li class="nav__item">
+              <a href="#portofolio" class="nav__link">Portofolio</a>
+            </li>
+
+            <li>
+              <button class="change-theme" id="theme-button">Mode Gelap</button>
+            </li>
+          </ul>
+        </div>
+
+        <div class="nav__toggle" id="nav-toggle">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-list"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+            />
+          </svg>
+        </div>
+      </nav>
+    </header>
+
+    <main class="l-main">
+      <!--========== HOME ==========-->
+      <section class="home" id="home">
+        <div class="home__container bd-container bd-grid">
+          <div class="home__img">
+            <svg
+              class="home__blob"
+              viewBox="0 0 479 467"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+            >
+              <mask id="mask0" mask-type="alpha">
+                <path
+                  d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"
+                />
+              </mask>
+              <g mask="url(#mask0)">
+                <path
+                  d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"
+                />
+                <image
+                  class="home__blob-img"
+                  x="60"
+                  y="20"
+                  href="assets/img/personal.png"
+                />
+              </g>
+            </svg>
+          </div>
+
+          <div class="home__data">
+            <h1 class="home__title">Portofolio Akhtar</h1>
+            <p class="home__description" id="typing-text"></p>
+            <a
+              href="https://www.linkedin.com/in/akhtar-faizi-putra-0a32a9220/"
+              class="button"
+              target="_blank"
+              >Lihat Detail Profil</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!--========== ABOUT ==========-->
+      <section class="about section bd-container" id="about">
+        <div class="bd-grid">
+          <div class="about__data">
+            <h2 class="section-title-center">Tentang Saya</h2>
+            <p class="about__description">
+              Seorang mahasiswa S1 yang antusias dengan pengalaman langsung dalam pengembangan situs web dan aplikasi Android. Terampil dalam membangun solusi digital yang responsif dan berfokus pada pengguna melalui proyek individu dan kolaboratif. Bersemangat untuk belajar dan beradaptasi, dengan minat yang kuat dalam menerapkan pengetahuan teknis pada tantangan dunia nyata dan mendukung kebutuhan bisnis atau pengguna.
+            </p>
+            <br />
+            <a
+              href="assets/doc/CV_Akhtar Faizi Putra.pdf"
+              class="button"
+              download=""
+              >Download CV Saya</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <div class="row bd-container">
+        <!--   *******  Education Section Starts  *******   -->
+
+        <section class="education" id="experience">
+          <div class="education">
+            <div class="col">
+              <header class="title">
+                <h2>Pengalaman Organisasi</h2>
+              </header>
+
+              <div class="contents">
+                <div class="box">
+                  <h4>Januari 2025 - Sekarang</h4>
+                  <h3>Mentor Divisi Android, Sahabat PNJ</h3>
+                  <p>
+                    Di KSM Sahabat PNJ, Saya mengajar basic pemrograman android,
+                    mengajar menggunakan kotlin native
+                  </p>
+                </div>
+
+                <div class="box">
+                  <h4>Februari 2024 - September 2024</h4>
+                  <h3>Kepala Divisi Website, Sahabat PNJ</h3>
+                  <p>
+                    Di KSM Sahabat PNJ, Saya mengajar basic pemrograman website,
+                    mengajar CRUD menggunakan bahasa PHP, mengajar menggunakan
+                    Bootstrap 5.3, dan mengajar menggunakan github.
+                  </p>
+                </div>
+
+                <div class="box">
+                  <h4>Maret 2023 - Desember 2023</h4>
+                  <h3>Member, Sahabat PNJ</h3>
+                  <p>
+                    Di KSM Sahabat PNJ, Saya belajar basic pemrograman website,
+                    belajar menggunakan tailwind, belajar menggunakan CRUD
+                    menggunakan bahasa PP. dan belajar menggunakan github. Saya
+                    mendapat penghargaan Best Mini Project 1.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!--   *******  Education Section Ends  *******   -->
+
+        <!--   *******  Experience Section Starts  *******  -->
+
+        <section class="experience">
+          <div class="col">
+            <header class="title">
+              <h2>Pengalaman Kerja</h2>
+            </header>
+
+            <div class="contents">
+              <div class="box">
+                <h4>September 2024 - Januari 2025</h4>
+                <h3>Mobile Development Cohort, Bangkit Academy (MSIB)</h3>
+                <p>
+                  Saya belajar android studio dari basic sampai
+                  mengimplementasikan machine learning dan cloud computing di
+                  Aplikasi Androidnya. Saya menjadi Product Manager di Capstone
+                  Project.
+                </p>
+              </div>
+
+              <div class="box">
+                <h4>Agustus 2021 - November 2021</h4>
+                <h3>
+                  Cyber Security Analyst Student, Infra Digital Foundation
+                  (Magang)
+                </h3>
+                <p>
+                  Saya Belajar tentang linux. belajar basic cyber security
+                  termasuk cyber security analyst, dan penetration tester.
+                </p>
+              </div>
+
+              <div class="box">
+                <h4>Maret 2021 - Juni 2021</h4>
+                <h3>
+                  Junior Data Analyst, PT Indonesian Comnets Plus (Magang)
+                </h3>
+                <p>
+                  Saya belajar aplikasi Arc GIS, belajar aplikasi Arc Map, dan
+                  belajar merekup data PLN seperti data tiang, dan data
+                  pelanggan
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!--   *******  Experience Section Ends   *******  -->
+      </div>
+
+      <!--========== PORTOFOLIO ==========-->
+     
+      <section class="portofolio section bd-container" id="portofolio">
+        <h2 class="section-title">Portofolio Saya</h2>
+      
+        <div class="portofolio__filters">
+          <span class="portofolio__item active-filter" data-filter="all"
+            >Semua</span
+          >
+          <span class="portofolio__item" data-filter=".web">Website</span>
+          <span class="portofolio__item" data-filter=".mobile">Mobile</span>
+          <span class="portofolio__item" data-filter=".machine_learning"
+            >Machine Learning</span
+          >
+          <span class="portofolio__item" data-filter=".backend">Backend</span>
+          <span class="portofolio__item" data-filter=".ui_ux">UI/UX</span>
+        </div>
+      
+        <div class="portofolio__container bd-grid">
+          <div class="portofolio__content mix mobile" id="portfolio-item-1">
+            <img
+              src="assets/img/portfolio/mobile/mobile 2.jpg"
+              alt=""
+              class="portofolio__img"
+            />
+            <h3 class="portofolio__title">Project Base Learning</h3>
+            <span class="portofolio__category">Pare AI</span>
+            <div class="button-container">
+              <button>
+              <a
+                href="https://github.com/PareAIApps/PareAIApps_Backup"
+                class="get__code full-width-button"
+                target="_blank"
+                >Lihat Proyek</a
+              ></button>
+            </div>
+          </div>
+      
+          <div class="portofolio__content mix machine_learning" id="portfolio-item-2">
+            <img
+              src="assets/img/portfolio/machine_learning/machine_learning 1.png"
+              alt=""
+              class="portofolio__img"
+            />
+            <h3 class="portofolio__title">Submission Dicoding</h3>
+            <span class="portofolio__category"
+              >Belajar Machine Learning untuk Pemula
+            </span>
+            <div class="button-container">
+              <button>
+              <a
+                href="https://github.com/akhtarerror/Belajar-Machine-Learning-untuk-Pemula"
+                class="get__code full-width-button"
+                target="_blank"
+                >Lihat Proyek</a
+              ></button>
+            </div>
+          </div>
+      
+          <div class="portofolio__content mix backend" id="portfolio-item-3">
+            <img
+              src="assets/img/portfolio/backend/backend 1.png"
+              alt=""
+              class="portofolio__img"
+            />
+            <h3 class="portofolio__title">Submission Dicoding</h3>
+            <span class="portofolio__category"
+              >Belajar Back-End Pemula dengan JavaScript
+            </span>
+            <div class="button-container">
+              <button>
+              <a
+                href="https://github.com/CekApel/Cek-Apel/tree/master/mobile_development"
+                class="get__code full-width-button"
+                target="_blank"
+                >Lihat Proyek</a
+              ></button>
+            </div>
+          </div>
+      
+          <div class="portofolio__content mix web" id="portfolio-item-4">
+            <img
+              src="assets/img/portfolio/website/website 3.png"
+              alt=""
+              class="portofolio__img"
+            />
+            <h3 class="portofolio__title">Submission Dicoding</h3>
+            <span class="portofolio__category"
+              >Belajar Fundamental Front-End Web Development</span
+            >
+            <div class="button-container">
+              <button>
+              <a
+                href="https://github.com/akhtarerror/Belajar-Fundamental-Front-End-Web-Development"
+                class="get__code full-width-button"
+                target="_blank"
+                >Lihat Proyek</a
+              ></button>
+            </div>
+          </div>
+      
+          <div class="portofolio__content mix web" id="portfolio-item-5">
+            <img
+              src="assets/img/portfolio/website/website 2.png"
+              alt=""
+              class="portofolio__img"
+            />
+            <h3 class="portofolio__title">Submission Dicoding</h3>
+            <span class="portofolio__category"
+              >Belajar Membuat Front-End Web untuk Pemula</span
+            >
+            <div class="button-container">
+              <button>
+              <a
+                href="https://akhtarerror.github.io/Belajar-Membuat-Front-End-Web-untuk-Pemula/"
+                class="get__code full-width-button"
+                target="_blank"
+                >Lihat Proyek</a
+              ></button>
+            </div>
+          </div>
+      
+          <div class="portofolio__content mix web" id="portfolio-item-6">
+            <img
+              src="assets/img/portfolio/website/website 1.png"
+              alt=""
+              class="portofolio__img"
+            />
+            <h3 class="portofolio__title">Submission Dicoding</h3>
+            <span class="portofolio__category">Front End Web Dasar</span>
+            <div class="button-container">
+              <button>
+              <a
+                href="https://akhtarerror.github.io/Belajar-Dasar-Pemrograman-Web/"
+                class="get__code full-width-button"
+                target="_blank"
+                >Lihat Proyek</a
+              ></button>
+            </div>
+          </div>
+      
+          <div class="portofolio__content mix ui_ux" id="portfolio-item-7">
+            <img
+              src="assets/img/portfolio/ui_ux/ui_ux 1.png"
+              alt=""
+              class="portofolio__img"
+            />
+            <h3 class="portofolio__title">Submission Dicoding</h3>
+            <span class="portofolio__category">Belajar Dasar UX Design</span>
+            <div class="button-container">
+              <button>
+              <a
+                href="https://docs.google.com/presentation/d/1PdUoAAvKLxAzkDGTne0W_7-SWHsth-W5muAkWVFAmvE/edit?usp=sharing"
+                class="get__code full-width-button"
+                target="_blank"
+                >Lihat Proyek</a
+              ></button>
+            </div>
+          </div>
+      
+          <div class="portofolio__content mix mobile" id="portfolio-item-8">
+            <img
+              src="assets/img/portfolio/mobile/mobile 1.jpg"
+              alt=""
+              class="portofolio__img"
+            />
+            <h3 class="portofolio__title">Capstone Project</h3>
+            <span class="portofolio__category">Cek Apel</span>
+            <div class="button-container">
+              <button>
+              <a
+                href="https://github.com/CekApel/Cek-Apel/tree/master/mobile_development"
+                class="get__code"
+                target="_blank"
+                >Lihat Proyek</a
+              >
+            </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    <!--========== FOOTER ==========-->
+    <footer>
+      <p class="footer__copy">
+        &copy; Copyrights 2023 Akhtar Error. Created with
+        <span>&#9829;</span> Akhtar Faizi Putra
+      </p>
+    </footer>
+
+    <!--========== MAIN JS ==========-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
