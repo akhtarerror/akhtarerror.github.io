@@ -97,25 +97,108 @@ themeButton.addEventListener("click", () => {
   localStorage.setItem("selected-theme", getCurrentTheme());
 });
 
-// Membuat tulisan bergerak
+/*==================== ENHANCED TYPING EFFECT ====================*/
+let typingText = "";
+let typingIndex = 0;
+let isTyping = false;
+let typingInterval;
+let cursorInterval;
+let isInHomeSection = true;
+
 const text =
   "Halo guys, perkenalkan nama saya Akhtar Faizi Putra. Saya mahasiswa Politeknik Negeri Jakarta.";
-let index = 0;
 
-function type() {
-  const typingText = document.getElementById("typing-text");
-  typingText.innerHTML = text.slice(0, index);
+// Fungsi untuk mengecek apakah sedang berada di section home
+function checkHomeSection() {
+  const homeSection = document.getElementById("home");
+  const rect = homeSection.getBoundingClientRect();
+  const windowHeight = window.innerHeight;
 
-  index++;
+  // Cek apakah section home terlihat di viewport
+  const isVisible = rect.top < windowHeight && rect.bottom > 0;
 
-  if (index > text.length) {
-    index = 0;
+  if (isVisible && !isInHomeSection) {
+    isInHomeSection = true;
+    startTyping();
+  } else if (!isVisible && isInHomeSection) {
+    isInHomeSection = false;
+    stopTyping();
   }
-
-  setTimeout(type, 100);
 }
 
-type();
+// Fungsi untuk memulai efek typing
+function startTyping() {
+  if (isTyping) return;
+
+  isTyping = true;
+  typingIndex = 0;
+
+  const typingElement = document.getElementById("typing-text");
+
+  // Mulai animasi cursor berkedip
+  startCursor();
+
+  typingInterval = setInterval(() => {
+    if (typingIndex <= text.length) {
+      typingText = text.slice(0, typingIndex);
+      typingElement.innerHTML =
+        typingText + '<span class="typing-cursor">|</span>';
+      typingIndex++;
+    } else {
+      // Setelah selesai mengetik, berhenti dan tampilkan cursor berkedip
+      clearInterval(typingInterval);
+      isTyping = false;
+
+      // Reset untuk mengulang
+      setTimeout(() => {
+        if (isInHomeSection) {
+          typingIndex = 0;
+          startTyping();
+        }
+      }, 2000); // Tunggu 2 detik sebelum mengulang
+    }
+  }, 80); // Kecepatan mengetik
+}
+
+// Fungsi untuk menghentikan efek typing
+function stopTyping() {
+  if (typingInterval) {
+    clearInterval(typingInterval);
+  }
+  if (cursorInterval) {
+    clearInterval(cursorInterval);
+  }
+
+  isTyping = false;
+
+  const typingElement = document.getElementById("typing-text");
+  // Tampilkan teks lengkap tanpa animasi
+  typingElement.innerHTML = text;
+}
+
+// Fungsi untuk cursor berkedip
+function startCursor() {
+  // Hentikan cursor interval yang mungkin sudah berjalan
+  if (cursorInterval) {
+    clearInterval(cursorInterval);
+  }
+
+  // Tidak perlu cursor interval terpisah karena sudah diatur dalam startTyping
+}
+
+// Event listener untuk scroll
+window.addEventListener("scroll", checkHomeSection);
+
+// Mulai typing saat halaman dimuat (jika di home section)
+document.addEventListener("DOMContentLoaded", () => {
+  // Cek posisi awal
+  checkHomeSection();
+
+  // Jika awalnya di home section, mulai typing
+  if (isInHomeSection) {
+    startTyping();
+  }
+});
 
 // Inisialisasi Scroll Reveal
 const sr = ScrollReveal({
@@ -184,7 +267,9 @@ const loadLikesFromStorage = () => {
   const likesData = JSON.parse(localStorage.getItem("PORTFOLIO_LIKES")) || {};
   for (const id in likesData) {
     const likesElement = document.getElementById("likes" + id);
-    likesElement.innerText = likesData[id] + " Likes";
+    if (likesElement) {
+      likesElement.innerText = likesData[id] + " Likes";
+    }
   }
 };
 
@@ -196,16 +281,18 @@ const saveLikesToStorage = (likesData) => {
 // Fungsi untuk menambah like
 const addLike = (portfolioId) => {
   const likesElement = document.getElementById("likes" + portfolioId);
-  const currentLikes = parseInt(likesElement.innerText);
+  if (likesElement) {
+    const currentLikes = parseInt(likesElement.innerText);
 
-  // Update likes count
-  const newLikes = currentLikes + 1;
-  likesElement.innerText = newLikes + " Likes";
+    // Update likes count
+    const newLikes = currentLikes + 1;
+    likesElement.innerText = newLikes + " Likes";
 
-  // Simpan data likes ke localStorage
-  const likesData = JSON.parse(localStorage.getItem("PORTFOLIO_LIKES")) || {};
-  likesData[portfolioId] = newLikes;
-  saveLikesToStorage(likesData);
+    // Simpan data likes ke localStorage
+    const likesData = JSON.parse(localStorage.getItem("PORTFOLIO_LIKES")) || {};
+    likesData[portfolioId] = newLikes;
+    saveLikesToStorage(likesData);
+  }
 };
 
 // Menambahkan event listener untuk setiap tombol Like
